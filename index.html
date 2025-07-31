@@ -1,54 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Leagues Cup</title>
+  <meta charset="UTF-8" />
+  <title>Leagues Cup Bracket</title>
   <style>
-    body { font-family: Arial, sans-serif; background: #111; color: #eee; padding: 20px; }
-    h1, h2 { color: gold; }
-    .section { margin-bottom: 2rem; }
-    .matchup {
-      padding: 10px;
-      margin: 8px 0;
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #eee;
+      padding: 20px;
+    }
+    h1 {
+      color: gold;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .bracket {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .round {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .match {
       background: #222;
       border-left: 5px solid gold;
-      display: flex;
-      justify-content: space-between;
+      padding: 10px 20px;
+      min-width: 200px;
+      text-align: center;
     }
-    .vs { margin: 0 8px; color: #888; }
-    .score { color: #aaa; font-size: 0.9em; margin-left: 8px; }
+    .winner {
+      color: gold;
+      font-weight: bold;
+    }
+    .line {
+      border-left: 2px solid gold;
+      height: 30px;
+      margin: 0 auto;
+    }
   </style>
 </head>
 <body>
-  <h1>🏆 Leagues Cup</h1>
+  <h1>🏆 Leagues Cup Bracket</h1>
+  <div class="bracket">
 
-  <div class="section">
-    <h2>🔥 Play-In Round 1</h2>
-    <div class="matchup">Real Madrid <span class="vs">vs</span> AFC Warriors</div>
-    <div class="matchup">Ethabella FC <span class="vs">vs</span> Jidz Trivela</div>
-    <div class="matchup">Sporting del Ma <span class="vs">vs</span> Mandem FC <span class="score">5–0</span></div>
-    <div class="matchup">Mini Santos <span class="vs">vs</span> Pizza Leo <span class="score">⚠️ Forfeit</span></div>
-  </div>
+    <!-- Play-In -->
+    <div class="round">
+      <h2>Play-In</h2>
+      <div class="match">Real Madrid vs AFC Warriors</div>
+      <div class="match">Ethabella FC vs Jidz Trivela</div>
+      <div class="match winner">Sporting del Ma 5 - 0 Mandem FC</div>
+      <div class="match winner">Pizza Leo (Forfeit)</div>
+      <div class="match winner">Ronney Tunes 1 - 0 Sporting del Ma</div>
+      <div class="match">Adeyemiii vs Winner of Ethabella FC / Jidz Trivela</div>
+    </div>
 
-  <div class="section">
-    <h2>⚔️ Play-In Round 2</h2>
-    <div class="matchup">Ronney Tunes <span class="vs">vs</span> Sporting del Ma <span class="score">1–0</span></div>
-  </div>
+    <!-- Quarterfinals -->
+    <div class="round">
+      <h2>Quarterfinals</h2>
+      <div class="match">Real MVC vs TBD</div>
+      <div class="match">Club Frijol vs <span class="winner">Ronney Tunes</span></div>
+      <div class="match">Elite VT vs <span class="winner">Pizza Leo</span></div>
+      <div class="match">Everything Dead vs TBD</div>
+    </div>
 
-  <div class="section">
-    <h2>✅ Quarterfinals</h2>
-    <div class="matchup">Real MVC <span class="vs">vs</span> TBD</div>
-    <div class="matchup">Club Frijol <span class="vs">vs</span> Ronney Tunes</div>
-    <div class="matchup">Elite VT <span class="vs">vs</span> Pizza Leo</div>
-    <div class="matchup">Everything Dead <span class="vs">vs</span> TBD</div>
-  </div>
+    <!-- Semifinals -->
+    <div class="round">
+      <h2>Semifinals</h2>
+      <div class="match">TBD vs TBD</div>
+      <div class="match">TBD vs TBD</div>
+    </div>
 
-  <div class="section">
-    <h2>🏅 Semifinals & Final (To Be Determined)</h2>
-    <div class="matchup">TBD <span class="vs">vs</span> TBD</div>
-    <div class="matchup">TBD <span class="vs">vs</span> TBD</div>
-    <br />
-    <div class="matchup">🎉 Final: TBD <span class="vs">vs</span> TBD</div>
+    <!-- Final -->
+    <div class="round">
+      <h2>Final</h2>
+      <div class="match">🎉 TBD vs TBD</div>
+    </div>
+
   </div>
 </body>
 </html>
