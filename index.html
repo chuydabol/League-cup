@@ -1,86 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Leagues Cup Bracket</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       background-color: #111;
-      color: #eee;
+      color: #f0f0f0;
+      font-family: 'Segoe UI', sans-serif;
       padding: 20px;
+      text-align: center;
     }
     h1 {
-      color: gold;
+      font-size: 2.5em;
+      margin-bottom: 0.2em;
+    }
+    .trophy {
+      max-width: 200px;
+      margin: 20px auto;
+      display: block;
+    }
+    .playins, .bracket {
+      max-width: 900px;
+      margin: 20px auto;
+      text-align: left;
+      background: #1b1b1b;
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .playins h2, .bracket h2 {
       text-align: center;
-      margin-bottom: 40px;
-    }
-    .bracket {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-    .round {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
+      color: #FFD700;
     }
     .match {
-      background: #222;
-      border-left: 5px solid gold;
-      padding: 10px 20px;
-      min-width: 200px;
+      margin: 10px 0;
+      padding: 8px;
+      background-color: #222;
+      border-left: 4px solid #FFD700;
+      border-radius: 4px;
+    }
+    .bracket-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
       text-align: center;
     }
-    .winner {
-      color: gold;
+    .bracket-grid div {
+      background: #222;
+      padding: 10px;
+      border-radius: 8px;
+      min-height: 60px;
+    }
+    .team {
       font-weight: bold;
     }
-    .line {
-      border-left: 2px solid gold;
-      height: 30px;
-      margin: 0 auto;
+    .winner {
+      color: #00ff99;
+    }
+    .loser {
+      color: #999;
     }
   </style>
 </head>
 <body>
-  <h1>🏆 Leagues Cup Bracket</h1>
-  <div class="bracket">
 
-    <!-- Play-In -->
-    <div class="round">
-      <h2>Play-In</h2>
-      <div class="match">Real Madrid vs AFC Warriors</div>
-      <div class="match">Ethabella FC vs Jidz Trivela</div>
-      <div class="match winner">Sporting del Ma 5 - 0 Mandem FC</div>
-      <div class="match winner">Pizza Leo (Forfeit)</div>
-      <div class="match winner">Ronney Tunes 1 - 0 Sporting del Ma</div>
-      <div class="match">Adeyemiii vs Winner of Ethabella FC / Jidz Trivela</div>
-    </div>
+  <h1>Leagues Cup 2025</h1>
+  <img src="Victory Amidst Shadows.png" alt="Trophy" class="trophy">
 
-    <!-- Quarterfinals -->
-    <div class="round">
-      <h2>Quarterfinals</h2>
-      <div class="match">Real MVC vs TBD</div>
-      <div class="match">Club Frijol vs <span class="winner">Ronney Tunes</span></div>
-      <div class="match">Elite VT vs <span class="winner">Pizza Leo</span></div>
-      <div class="match">Everything Dead vs TBD</div>
-    </div>
-
-    <!-- Semifinals -->
-    <div class="round">
-      <h2>Semifinals</h2>
-      <div class="match">TBD vs TBD</div>
-      <div class="match">TBD vs TBD</div>
-    </div>
-
-    <!-- Final -->
-    <div class="round">
-      <h2>Final</h2>
-      <div class="match">🎉 TBD vs TBD</div>
-    </div>
-
+  <div class="playins">
+    <h2>Play-In Results</h2>
+    <div class="match"><span class="team">Real Madrid</span> vs <span class="team winner">AFC Warriors</span> ✅</div>
+    <div class="match"><span class="team winner">Ethabella FC</span> 2 - 0 <span class="team">Jidz Trivela</span> ✅</div>
+    <div class="match"><span class="team winner">Sporting del Ma</span> 5 - 0 <span class="team">Mandem FC</span> ✅</div>
+    <div class="match"><span class="team winner">Pizza Leo</span> (Advance by Forfeit) ✅</div>
+    <div class="match"><span class="team winner">Ronney Tunes</span> 1 - 0 <span class="team">Sporting del Ma</span> ✅</div>
+    <div class="match"><span class="team">Adeyemiii</span> (❌ Disqualified)</div>
   </div>
+
+  <div class="bracket">
+    <h2>Quarterfinal Bracket</h2>
+    <div class="bracket-grid">
+      <div>
+        <div class="team winner">Ethabella FC</div>
+        <div class="team">vs</div>
+        <div class="team">Everything Dead</div>
+      </div>
+      <div>
+        <div class="team winner">AFC Warriors</div>
+        <div class="team">vs</div>
+        <div class="team">Real MVC</div>
+      </div>
+      <div>
+        <div class="team winner">Ronney Tunes</div>
+        <div class="team">vs</div>
+        <div class="team">Club Frijol</div>
+      </div>
+      <div>
+        <div class="team winner">Pizza Leo</div>
+        <div class="team">vs</div>
+        <div class="team">Elite VT</div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
