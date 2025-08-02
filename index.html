@@ -6,112 +6,82 @@
   <title>Leagues Cup Bracket</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom, #000000, #3a3a3a);
+      font-family: 'Arial', sans-serif;
+      background: #111;
       color: gold;
-      text-align: center;
+      margin: 0;
+      padding: 2rem;
     }
 
     h1 {
-      font-size: 2.5rem;
-      margin-top: 1rem;
-      color: gold;
-      text-shadow: 1px 1px 4px #000;
-    }
-
-    img.trophy {
-      width: 300px;
-      margin: 20px auto;
-      display: block;
-      border: 4px solid gold;
-      border-radius: 10px;
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
     }
 
     .bracket {
       display: flex;
-      flex-direction: row;
       justify-content: center;
-      flex-wrap: wrap;
-      margin: 40px auto;
-      max-width: 1200px;
+      gap: 4rem;
     }
 
     .round {
-      flex: 1;
-      min-width: 160px;
-      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
     }
 
     .match {
-      background-color: rgba(255, 215, 0, 0.1);
-      border: 1px solid gold;
+      border: 2px solid gold;
+      padding: 1rem;
       border-radius: 8px;
-      margin: 20px 0;
-      padding: 10px;
+      min-width: 200px;
+      text-align: center;
     }
 
-    .winner {
+    .vs {
+      margin: 0.5rem 0;
       font-weight: bold;
-      color: lightgreen;
-    }
-
-    .loser {
-      text-decoration: line-through;
-      color: #999;
-    }
-
-    .label {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-      border-bottom: 1px solid gold;
-    }
-
-    @media (max-width: 768px) {
-      .bracket {
-        flex-direction: column;
-        align-items: center;
-      }
+      color: #ccc;
     }
   </style>
 </head>
 <body>
-  <h1>🏆 Leagues Cup Bracket</h1>
 
-  <img src="Victory%20Amidst%20Shadows.png" alt="Trophy Image" class="trophy" />
+  <h1>🏆 Leagues Cup – Semifinals & Final</h1>
 
   <div class="bracket">
+    <!-- Semifinals -->
     <div class="round">
-      <div class="label">Play-In</div>
+      <h2>Semifinals</h2>
 
-      <div class="match"><span class="winner">AFC Warriors</span> def. <span class="loser">Real Madrid</span></div>
-      <div class="match"><span class="winner">Ethabella FC</span> 2–0 <span class="loser">Jidz Trivela</span></div>
-      <div class="match"><span class="winner">Sporting del Ma</span> 5–0 <span class="loser">Mandem FC</span></div>
-      <div class="match"><span class="winner">Pizza Leo</span> advances (Forfeit)</div>
-      <div class="match"><span class="winner">Ronney Tunes</span> 1–0 <span class="loser">Sporting del Ma</span></div>
-      <div class="match"><span class="loser">Adeyemiii</span> Disqualified</div>
+      <div class="match">
+        <div>Elite VT</div>
+        <div class="vs">vs</div>
+        <div>Real MVC</div>
+      </div>
+
+      <div class="match">
+        <div>Ronney Tunes</div>
+        <div class="vs">vs</div>
+        <div>Winner of:</div>
+        <div>Ethabella FC</div>
+        <div class="vs">vs</div>
+        <div>Everything Dead</div>
+      </div>
     </div>
 
+    <!-- Final -->
     <div class="round">
-      <div class="label">Quarterfinals</div>
-
-      <div class="match"><span class="winner">Ethabella FC</span> vs Everything Dead</div>
-      <div class="match"><span class="winner">AFC Warriors</span> vs Real MVC</div>
-      <div class="match"><span class="winner">Ronney Tunes</span> vs Club Frijol</div>
-      <div class="match"><span class="winner">Elite VT</span> def. <span class="loser">Pizza Leo</span> 10–4</div>
-    </div>
-
-    <div class="round">
-      <div class="label">Semifinals</div>
-      <div class="match">[ TBD ]</div>
-      <div class="match">[ TBD ]</div>
-    </div>
-
-    <div class="round">
-      <div class="label">Final</div>
-      <div class="match">[ TBD ]</div>
+      <h2>Final</h2>
+      <div class="match">
+        <div>Winner of Semifinal 1</div>
+        <div class="vs">vs</div>
+        <div>Winner of Semifinal 2</div>
+      </div>
     </div>
   </div>
+
 </body>
 </html>
