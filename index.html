@@ -8,42 +8,69 @@
     body {
       font-family: 'Arial', sans-serif;
       background: #111;
-      color: gold;
+      color: #f5d442;
       margin: 0;
-      padding: 2rem;
+      padding: 1rem;
     }
 
     h1 {
       text-align: center;
-      font-size: 2rem;
+      font-size: 1.8rem;
       margin-bottom: 2rem;
     }
 
     .bracket {
       display: flex;
+      flex-direction: row;
       justify-content: center;
-      gap: 4rem;
-    }
-
-    .round {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      flex-wrap: wrap;
       gap: 2rem;
     }
 
+    .round {
+      flex: 1;
+      min-width: 280px;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .round h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
     .match {
-      border: 2px solid gold;
+      background-color: #222;
+      border: 2px solid #f5d442;
       padding: 1rem;
-      border-radius: 8px;
-      min-width: 200px;
+      border-radius: 10px;
+      width: 100%;
+      margin-bottom: 1.5rem;
       text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
     }
 
     .vs {
-      margin: 0.5rem 0;
+      margin: 0.4rem 0;
       font-weight: bold;
       color: #ccc;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .match {
+        font-size: 0.95rem;
+        padding: 0.8rem;
+      }
+
+      .round h2 {
+        font-size: 1.2rem;
+      }
     }
   </style>
 </head>
